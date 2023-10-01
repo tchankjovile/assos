@@ -13,18 +13,15 @@ return new class extends Migration
     {
         Schema::create('membres', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('prenom');
-            $table->date('date_naissance');
-            $table->string('email');
-            $table->string('sexe');
-            $table->string('NO_CNI');
-            $table->string('ville_residence');
-            $table->string('pays_residence');
-            $table->integer('telephone');
-            $table->string('profession');
-            $table->date('date_adhesion');
-
+            $table->foreignId("role_id")->constrained()->cascadeOnDelete();
+            $table->string("no_cni",11)->unique();
+            $table->string("nom");
+            $table->string("prenom");
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->string("login");
+            $table->date("date_naissance");
             $table->timestamps();
         });
     }

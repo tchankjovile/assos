@@ -13,7 +13,7 @@
                     <h2>ASSOSiation APDTA</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{route('membres.create)}}> Create Membre </a>
+                    <a class="btn btn-success" href="{{route('membres.create')}}"> Create Membre </a>
                 </div>
             </div>
         </div>
