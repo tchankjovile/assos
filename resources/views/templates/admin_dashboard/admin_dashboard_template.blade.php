@@ -23,14 +23,14 @@
                     </a>
                 </li>
 
-                <li  @class(["sidebar-item","active"=>Route::is("admin.demandes.approuver")])>
-                    <a class="sidebar-link"  href="{{route('admin.demandes.index')}}">
-                        <i class="align-middle" data-feather="book"></i> <span class="align-middle">Demandes Approuver</span>
+                <li  @class(["sidebar-item","active"=>Route::is("admin.demandes.listvalid")])>
+                    <a class="sidebar-link"  href="{{route('admin.demandes.listvalid')}}">
+                        <i class="align-middle" data-feather="book"></i> <span class="align-middle">Demandes Approuvées</span>
                     </a>
                 </li>
-                <li  @class(["sidebar-item","active"=>Route::is("admin.demandes.rejeter")])>
-                    <a class="sidebar-link"  href="{{route('admin.publications.rejeter')}}">
-                        <i class="align-middle" data-feather="share"></i> <span class="align-middle">Demandes Rejetés</span>
+                <li  @class(["sidebar-item","active"=>Route::is("admin.demandes.listinvalid")])>
+                    <a class="sidebar-link"  href="{{route('admin.demandes.listinvalid')}}">
+                        <i class="align-middle" data-feather="share"></i> <span class="align-middle">Demandes non approuvées </span>
                     </a>
                 </li>
 
@@ -44,14 +44,14 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="#">
+                <li @class(["sidebar-item","active"=>Route::is("admin.membres.*")])>
+                    <a class="sidebar-link" href="{{route('admin.membres.index')}}">
                         <i class="align-middle" data-feather="user"></i> <span
                             class="align-middle">Membres</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="#">
+                <li @class(["sidebar-item","active"=>Route::is("admin.dons.index")])>
+                    <a class="sidebar-link" href="{{route('admin.dons.index')}}">
                         <i class="align-middle" data-feather="user"></i> <span
                             class="align-middle">Dons</span>
                     </a>

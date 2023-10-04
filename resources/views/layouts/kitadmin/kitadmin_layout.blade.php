@@ -32,7 +32,7 @@
             @include("layouts.kitadmin._partials.navbar")
         @endif
 
-        <main class="content">
+        <main class="content p-2">
             @yield("content")
         </main>
 

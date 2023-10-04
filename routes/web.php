@@ -27,9 +27,10 @@ Route::get("demande-adhesion",[DemandeAdhesionController::class,'index'])->name(
 Route::post("demande-adhesion/store",[DemandeAdhesionController::class,'store'])->name("adhesion.store");
 // pour les don
 Route::get("membre/don",[DonateController::class,"index"])->name("donate");
+
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth:web', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -17,12 +17,21 @@ return new class extends Migration
             $table->string("no_cni",11)->unique();
             $table->string("nom");
             $table->string("prenom");
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
             $table->string("login");
+            $table->string('email');
+            $table->string('sexe')->nullable();
+            $table->string('password');
             $table->date("date_naissance");
+            $table->string('ville_residence')->nullable();
+            $table->string('pays_residence')->nullable();
+            $table->integer('telephone')->nullable();
+            $table->string('profession')->nullable();
+            $table->date('date_adhesion');
             $table->timestamps();
+            $table->rememberToken();
+                        $table->timestamp('email_verified_at')->nullable();
+
+
         });
     }
 

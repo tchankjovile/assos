@@ -1,12 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DonateController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\Admin\AdminHomeController;
-use App\Http\Controllers\DemandeAdhesionController;
 use App\Http\Controllers\Admin\AdminDemandeAdhesionController;
+use App\Http\Controllers\Admin\AdminHomeController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +15,16 @@ use App\Http\Controllers\Admin\AdminDemandeAdhesionController;
 |
 */
 
-Route::prefix("admin")->as("admin.")->group(function(){
-    Route::get("home",[AdminHomeController::class,"home"])->name("home");
-    Route::get('demande/all', [AdminDemandeAdhesionController::class,"index"])->name("demandes.index");
-    Route::get('demande/accepter', [AdminDemandeAdhesionController::class,"accepted"])->name("demandes.approuver");
-    Route::get('demande/rejeter', [AdminDemandeAdhesionController::class,"rejected"])->name("demandes.rejeter");
-
-});
+Route::middleware("auth:admin")->prefix("admin")->as("admin.")
+    ->group(function () {
+        Route::redirect("/","/home");
+        Route::get("home", [AdminHomeController::class, "home"])->name("home");
+        Route::get('demandes/all', [AdminDemandeAdhesionController::class, "index"])->name("demandes.index");
+        Route::get('demandes/list-valid', [AdminDemandeAdhesionController::class, "listValid"])->name("demandes.listvalid");
+        Route::get('demandes/list-invalid', [AdminDemandeAdhesionController::class, "listInValid"])->name("demandes.listinvalid");
+        Route::post("demandes/{demande}/accepter", [AdminDemandeAdhesionController::class, "accepter"])->name("demandes.accepter");
+        #don
+        Route::get("/dons",[\App\Http\Controllers\Admin\AdminDonController::class,"index"])->name("dons.index");
+        Route::get('demandes/list-invalid', [AdminDemandeAdhesionController::class, "listInValid"])->name("demandes.listinvalid");
+        Route::resource("membres", \App\Http\Controllers\Admin\AdminMembreController::class);
+    });

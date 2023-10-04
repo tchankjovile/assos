@@ -4,14 +4,14 @@
 			<div class="col-lg-4">
 				<div class="widget">
 					<h3>About</h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					<p>la collaboration notre objectif</p>
 				</div> <!-- /.widget -->
 				<div class="widget">
-					<address>43 Raymouth Rd. Baltemoer, <br> London 3910</address>
+					<address>Awae ,  Derriere Institut Africain d'insformatique, <br> Yaounde,Cameroun</address>
 					<ul class="list-unstyled links">
-						<li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-						<li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-						<li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+						<li><a href="tel://237696778394">(237) 656789043</a></li>
+						<li><a href="tel://237696778394">(237) 699568073</a></li>
+						<li><a href="mailto:joviltchank@gmail.com">joviltchank@gmail.com</a></li>
 					</ul>
 				</div> <!-- /.widget -->
 			</div> <!-- /.col-lg-4 -->
@@ -21,18 +21,14 @@
 					<ul class="list-unstyled float-start links">
 						<li><a href="#">About us</a></li>
 						<li><a href="#">Services</a></li>
-						<li><a href="#">Vision</a></li>
 						<li><a href="#">Mission</a></li>
 						<li><a href="#">Terms</a></li>
-						<li><a href="#">Privacy</a></li>
 					</ul>
 					<ul class="list-unstyled float-start links">
-						<li><a href="#">Partners</a></li>
-						<li><a href="#">Business</a></li>
-						<li><a href="#">Careers</a></li>
-						<li><a href="#">Blog</a></li>
+						<li><a href="#">Partenaires</a></li>
+						<li><a href="#">Nos publications</a></li>
+						<li><a href="#">Carierres</a></li>
 						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Creative</a></li>
 					</ul>
 				</div> <!-- /.widget -->
 			</div> <!-- /.col-lg-4 -->
@@ -40,9 +36,9 @@
 				<div class="widget">
 					<h3>Navigation</h3>
 					<ul class="list-unstyled links mb-4">
-						<li><a href="#">Our Vision</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Notre vision</a></li>
+						<li><a href="#">A propos de nous</a></li>
+						<li><a href="#">Nous contacter</a></li>
 					</ul>
 
 					<h3>Social</h3>
@@ -51,19 +47,9 @@
 						<li><a href="#"><span class="icon-twitter"></span></a></li>
 						<li><a href="#"><span class="icon-facebook"></span></a></li>
 						<li><a href="#"><span class="icon-linkedin"></span></a></li>
-						<li><a href="#"><span class="icon-pinterest"></span></a></li>
-						<li><a href="#"><span class="icon-dribbble"></span></a></li>
 					</ul>
 				</div> <!-- /.widget -->
 			</div> <!-- /.col-lg-4 -->
 		</div> <!-- /.row -->
-
-		<div class="row mt-5">
-			<div class="col-12 text-center">
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
-            </p>
-          </div>
-        </div>
       </div> <!-- /.container -->
     </div>
-</div>

@@ -11,7 +11,6 @@ class Authenticate extends ParentAuthenticate
      */
     protected function redirectTo(Request $request,$guards): ?string
     {
-        dd($guards);
         return $request->expectsJson() ? null : route('login');
     }
 }

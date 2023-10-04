@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string("email");
             $table->string("photo");
             $table->string("photo_cni");
-            $table->foreignId("approuve_par")->constrained("membres","id")->cascadeOnDelete();
+            $table->foreignId("approuve_par")->nullable()->constrained("administrateurs","id")->cascadeOnDelete();
             $table->timestamps();
         });
     }

@@ -183,7 +183,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
-        'MaVue'=> \Illuminate\Support\Facades\View::class
+        'MaVue'=> \Illuminate\Support\Facades\View::class,
+        'ReturnStatus'=>\App\Constant\ReturnStatus::class
     ])->toArray(),
 
 ];

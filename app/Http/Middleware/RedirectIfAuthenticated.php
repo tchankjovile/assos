@@ -19,10 +19,14 @@ class RedirectIfAuthenticated
     {
         $guards = empty($guards) ? [null] : $guards;
 
+
         foreach ($guards as $guard) {
 
             if (Auth::guard($guard)->check() and $guard =="web") {
                 return redirect(RouteServiceProvider::HOME);
+            }
+            if (Auth::guard($guard)->check() and $guard == "admin"){
+                return redirect(RouteServiceProvider::ADMIN_HOME);
             }
         }
 

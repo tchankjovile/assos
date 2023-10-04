@@ -3,10 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Membre extends Model
+class Membre extends Authenticatable
 {
-    use HasFactory;
-    protected $fillable = ['nom', 'prenom', 'date_naissance', 'email', 'sexe', 'NO_CNI', 'ville_residence', 'pays_residence', 'telephone', 'profession', 'date_adhesion'];
+    use HasFactory,Notifiable;
+
+    protected $guarded = [];
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 }
